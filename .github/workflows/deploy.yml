@@ -23,4 +23,4 @@ jobs:
         run: aws s3 sync website s3://your-resume-website/ --delete
 
       - name: Invalidate CloudFront Cache
-        run: aws cloudfront create-invalidation --distribution-id YOUR_DISTRIBUTION_ID --paths "/*"
+        run: aws cloudfront create-invalidation --distribution-id E1TWR8RRLDTIOP --paths "/*"
