@@ -6,6 +6,21 @@
     <title>My Resume</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
+    <style>
+        .language-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .language-button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: default;
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -21,6 +36,7 @@
 
     <section id="about">
         <h1>About Me</h1>
+        <img src="your-photo.jpg" alt="Your Photo" style="width:150px; height:auto; display:block; margin:10px auto;"> <!-- Add personal photo -->
         <p>I started my career as an English teacher, where I developed a strong foundation in creativity, problem-solving, teamwork, leadership, autonomy, and effective communication. Teaching not only sharpened my ability to convey complex ideas clearly but also strengthened my analytical thinking and adaptability skills that are essential in any field.
             Driven by a passion for technology and security, I made a strategic career transition into cybersecurity. Over the past few months, I have been immersing myself in the field, actively working toward industry-recognized certifications, including AWS Security Specialty, CompTIA Security+, Microsoft Azure AZ-900, and SC-900 Microsoft Security Fundamentals.  In addition, I have already earned the AWS Cloud Practitioner and AWS Solutions Architect Associate certifications, solidifying my expertise in cloud infrastructure and security best practices. At the same time, I am completing my degree in Cybersecurity, deepening my technical knowledge and hands-on expertise.
             My goal is to bridge my background in education with my growing expertise in cybersecurity, combining clear communication with strong technical skills to protect digital environments and contribute to a more secure future. I am eager to apply my knowledge in real-world scenarios, collaborate with industry professionals, and continue expanding my skill set in cloud security and beyond.</p>
@@ -43,22 +59,24 @@
     <section id="languages">
         <h1>Languages</h1>
         <ul>
-            <li>Portuguese</li>
-            <li>English</li>
+            <li class="language-item">Portuguese <button class="language-button">Native</button></li>
+            <li class="language-item">English <button class="language-button">Fluent</button></li>
         </ul>
     </section>
 
     <section id="certifications">
         <h1>Certifications</h1>
         <ul>
-            <li>AWS Certified Cloud Practitioner</li>
-            <li>AWS Certified Solutions Architect</li>
+            <li><img src="cert1.png" alt="AWS Certified Cloud Practitioner" style="width:100px; height:auto;"></li>
+            <li><img src="cert2.png" alt="AWS Certified Solutions Architect" style="width:100px; height:auto;"></li>
         </ul>
     </section>
 
     <section id="contact">
         <h1>Contact</h1>
-        <p>Email: example@example.com</p>
+        <a href="mailto:example@example.com">Email Me</a>
+        <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+        <a href="https://github.com/yourgithub" target="_blank">GitHub</a>
     </section>
 </body>
 </html>
