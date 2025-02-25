@@ -82,3 +82,57 @@ footer {
 footer p {
     font-size: 14px;
 }
+/* Certification section styles */
+.certifications ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    list-style-type: none;
+    padding: 0;
+}
+
+.certifications li {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+.certifications li:hover {
+    transform: scale(1.1);
+}
+
+.certifications li img {
+    width: 100px;
+    height: auto;
+    transition: filter 0.3s ease-in-out;
+}
+
+.certifications li:hover img {
+    filter: brightness(1.3);
+}
+
+/* Highlight effect for important text */
+.highlight {
+    font-weight: bold;
+    color: #00bcd4;
+    transition: color 0.3s ease-in-out;
+}
+
+.highlight:hover {
+    color: #ffcc00;
+}
+
+/* Intro text and typewriter effect */
+.intro-text {
+    text-align: center;
+    font-size: 2em;
+    margin-top: 20px;
+}
+
+.typewriter {
+    font-weight: bold;
+    color: #00bcd4;
+}
+
