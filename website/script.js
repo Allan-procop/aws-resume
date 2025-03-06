@@ -74,3 +74,34 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.querySelector(".contact-form");
+    const responseMessage = document.getElementById("responseMessage");
+
+    form.addEventListener("submit", async (event) => {
+        event.preventDefault(); // Prevent default form submission
+
+        const formData = new FormData(form);
+
+        try {
+            const response = await fetch(form.action, {
+                method: "POST",
+                body: formData,
+                headers: { "Accept": "application/json" },
+            });
+
+            if (response.ok) {
+                responseMessage.textContent = "Your message has been sent successfully!";
+                responseMessage.style.color = "#00bcd4";
+                form.reset(); // Clear the form after submission
+            } else {
+                responseMessage.textContent = "Oops! Something went wrong. Try again.";
+                responseMessage.style.color = "red";
+            }
+        } catch (error) {
+            responseMessage.textContent = "Failed to send message.";
+            responseMessage.style.color = "red";
+        }
+    });
+});
