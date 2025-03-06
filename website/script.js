@@ -116,3 +116,27 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    let lastScrollY = window.scrollY;
+    const navbar = document.querySelector("nav");
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > lastScrollY) {
+            // Scrolling down → Hide navbar
+            navbar.classList.add("nav-hidden");
+        } else {
+            // Scrolling up → Show navbar
+            navbar.classList.remove("nav-hidden");
+        }
+        lastScrollY = window.scrollY;
+    });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const scrollToTop = document.getElementById("scrollToTop");
+
+    scrollToTop.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+});

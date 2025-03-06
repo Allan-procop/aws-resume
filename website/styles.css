@@ -397,6 +397,9 @@ footer p {
     }
 
     /* Contact Section */
+
+/* Contact Section Responsive Fix */
+@media screen and (max-width: 768px) {
     .contact-container {
         flex-direction: column;
         text-align: center;
@@ -412,9 +415,71 @@ footer p {
         width: 90%;
     }
 
-    /* Social Icons */
+    .contact-info p, .contact-info a {
+        font-size: 1em; /* Adjust text size for readability */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    /* Adjust Contact Buttons */
     .contact-info a {
         width: 80%;
         padding: 10px;
+        display: block;
+        text-align: center;
+    }
+
+    /* Fix social media icons alignment */
+    .contact-info i {
+        font-size: 1.5em;
     }
 }
+}
+
+/* Navbar Default State */
+nav {
+    background-color: #1f1f1f;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    transition: top 0.3s ease-in-out;
+}
+
+/* Hidden Navbar Class */
+.nav-hidden {
+    top: -80px; /* Moves navbar out of view */
+}
+
+/* Add padding to the intro section to avoid being hidden by the navbar */
+.intro-text {
+    padding-top: 100px; /* Pushes text down so it doesn’t get covered */
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Scroll to Top Bar */
+.scroll-bar {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #00bcd4;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0.7;
+}
+
+.scroll-bar:hover {
+    opacity: 1;
+    transform: translateX(-50%) scale(1.1);
+}
+
