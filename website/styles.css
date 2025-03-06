@@ -260,3 +260,68 @@ footer p {
 .contact-form button:hover {
     background: #008c9e;
 }
+
+/* Contact Section Styling */
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 188, 212, 0.5);
+}
+
+/* Centering Contact Info */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* Style for Icons and Links */
+.contact-info p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+/* Centering Icons */
+.contact-info i {
+    font-size: 1.8em;
+    color: #00bcd4;
+}
+
+/* Styled Social Media Links */
+.contact-info a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    width: 200px; /* Makes button wider */
+}
+
+/* Specific Colors for Branding */
+.contact-info a[href*="linkedin"] {
+    background: #0077b5;
+}
+
+.contact-info a[href*="github"] {
+    background: #333;
+}
+
+/* Hover Effects */
+.contact-info a:hover {
+    transform: scale(1.1);
+    background: #00bcd4;
+}

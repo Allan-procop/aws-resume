@@ -54,26 +54,37 @@ document.addEventListener("DOMContentLoaded", () => {
         english: "I am fluent in English, both written and spoken, and use it daily in my work.",
     };
 
+    let typingInterval; // Variable to track the interval
+    let isTyping = false; // Flag to prevent multiple animations
+
     function typeWriterEffect(text, element, speed = 50) {
         let i = 0;
-        element.textContent = ""; // Clear previous text
-        function type() {
+        clearInterval(typingInterval); // Stop any ongoing typing animation
+        isTyping = true;
+        element.textContent = ""; // Reset text before typing
+
+        typingInterval = setInterval(() => {
             if (i < text.length) {
                 element.textContent += text.charAt(i);
                 i++;
-                setTimeout(type, speed);
+            } else {
+                clearInterval(typingInterval); // Stop the animation when done
+                isTyping = false;
             }
-        }
-        type();
+        }, speed);
     }
 
     buttons.forEach(button => {
         button.addEventListener("click", () => {
-            const lang = button.getAttribute("data-language");
-            typeWriterEffect(languageInfo[lang], description);
+            if (!isTyping) { // Prevent new typing if one is already running
+                const lang = button.getAttribute("data-language");
+                typeWriterEffect(languageInfo[lang], description);
+            }
         });
     });
 });
+
+
 
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector(".contact-form");
