@@ -329,3 +329,92 @@ footer p {
     transform: scale(1.1);
     background: #00bcd4;
 }
+
+/* Make Sections More Responsive */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px; /* Slightly reduce text size */
+    }
+
+    /* Navigation Menu */
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* About Me Section */
+    .about-me {
+        max-width: 90%;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .about-me img {
+        width: 120px;
+        height: 120px;
+    }
+
+    /* Projects Section */
+    .project {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    /* Skills Section */
+    .skill {
+        text-align: center;
+    }
+
+    .progress-bar {
+        width: 90%;
+    }
+
+    /* Languages Section */
+    .language-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .language-btn {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+
+    /* Certifications Section */
+    .certifications ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .certifications li {
+        width: 45%;
+        margin: 5px;
+    }
+
+    /* Contact Section */
+    .contact-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .contact-info {
+        width: 100%;
+        text-align: center;
+    }
+
+    .contact-form {
+        width: 90%;
+    }
+
+    /* Social Icons */
+    .contact-info a {
+        width: 80%;
+        padding: 10px;
+    }
+}
