@@ -44,3 +44,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
     setTimeout(typeEffect, 500);
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const buttons = document.querySelectorAll(".language-btn");
+    const description = document.getElementById("language-description");
+
+    const languageInfo = {
+        portuguese: "Portuguese is my native language. I speak and write it fluently.",
+        english: "I am fluent in English, both written and spoken, and use it daily in my work.",
+    };
+
+    function typeWriterEffect(text, element, speed = 50) {
+        let i = 0;
+        element.textContent = ""; // Clear previous text
+        function type() {
+            if (i < text.length) {
+                element.textContent += text.charAt(i);
+                i++;
+                setTimeout(type, speed);
+            }
+        }
+        type();
+    }
+
+    buttons.forEach(button => {
+        button.addEventListener("click", () => {
+            const lang = button.getAttribute("data-language");
+            typeWriterEffect(languageInfo[lang], description);
+        });
+    });
+});
