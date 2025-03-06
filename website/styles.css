@@ -173,7 +173,10 @@ footer p {
 }
 
 /* Skill level percentages */
-.cyber { width: 90%; }
-.cloud { width: 80%; }
-.python { width: 70%; }
+.Cloud { width: 90%; }
+.Python { width: 85%; }
+.Terraform { width: 45%; }
+.Git { width: 100%; }
+.SQL { width: 78%; }
+
 
