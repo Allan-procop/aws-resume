@@ -183,13 +183,13 @@ footer p {
 }
 
 /* Skill level percentages */
-.Cloud { width: 90%; }
+.Cloud { width: 100%; }
 .Python { width: 85%; }
-.Terraform { width: 45%; }
+.Terraform { width: 50%; }
 .Git { width: 100%; }
 .SQL { width: 78%; }
-.Docker { width: 60%; }
-.Kubernetes { width: 55%; }
+.Docker { width: 70%; }
+.Kubernetes { width: 60%; }
 
 .language-btn {
     background-color: #00bcd4;
