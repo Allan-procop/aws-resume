@@ -58,10 +58,17 @@ h1 {
     padding: 15px;
     border-radius: 8px;
     transition: transform 0.3s ease;
+    display: block;
+    text-decoration: none;     
+    color: #ddd;              
+    font-size: 1em;            
+    font-weight: normal;       
+    text-align: center;
 }
 
 .project:hover {
     transform: scale(1.05);
+    color: #00eaff;
 }
 
 ul {
